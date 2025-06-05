@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: bablu001/wanderlust-frontend-beta:v16
+          image: bablu001/wanderlust-frontend-beta:21
           ports:
             - containerPort: 5173  # ✅ Assuming your frontend app listens on this port
 ---
