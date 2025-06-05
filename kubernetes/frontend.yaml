@@ -12,15 +12,14 @@ spec:
       app: frontend
   template:
     metadata:
-      name: frontend
       labels:
         app: frontend
     spec:
       containers:
         - name: frontend
-          image: bablu001/wanderlust-backend-beta:v8.0
+          image: bablu001/wanderlust-frontend-beta:v8.0  # ✅ Use the correct frontend image
           ports:
-            - containerPort: 5173
+            - containerPort: 5173  # ✅ Assuming your frontend app listens on this port
 ---
 apiVersion: v1
 kind: Service
@@ -33,6 +32,6 @@ spec:
     app: frontend
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 5173  # ✅ Match the containerPort
       protocol: TCP
       nodePort: 31000
