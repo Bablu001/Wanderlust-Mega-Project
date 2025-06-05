@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: bablu001/wanderlust-backend-beta:v13
+          image: bablu001/wanderlust-backend-beta:v14
           ports:
             - containerPort: 8080
 ---
